@@ -30,7 +30,7 @@ def snowpark_basic_auth() -> Session:
        "region":"us-east-1",
         "USER":"Srinviasravi",
         "PASSWORD":"Ravindra@9362",
-        "ROLE":"SYSADMIN",
+        "ROLE":"ACCOUNTADMIN",
         "DATABASE":"dev_db",
         "SCHEMA":"stage_sch",
         "WAREHOUSE":"load_wh"
