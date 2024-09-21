@@ -26,15 +26,23 @@ today_string = current_time_ist.strftime('%Y_%m_%d')
 # Following credential has to come using secret whie running in automated way
 def snowpark_basic_auth() -> Session:
     connection_parameters = {
-       "ACCOUNT":"VJB84199.us-east-1",
+       "ACCOUNT":"mntiowa-vjb84199",
        "region":"us-east-1",
         "USER":"Srinviasravi",
         "PASSWORD":"Ravindra@9362",
-        "ROLE":"ACCOUNTADMIN",
+        "ROLE":"SYSADMIN",
         "DATABASE":"dev_db",
         "SCHEMA":"stage_sch",
         "WAREHOUSE":"load_wh"
     }
+
+    #     SNOWFLAKE_USER=Srinviasravi
+    # SNOWFLAKE_PASSWORD=Ravindra@9362
+    # SNOWFLAKE_ACCOUNT=mntiowa-vjb84199
+    # SNOWFLAKE_WAREHOUSE=load_wh
+    # SNOWFLAKE_DATABASE=dev_db
+    # SNOWFLAKE_SCHEMA=stage_sch
+    # SNOWFLAKE_ROLE=SYSADMIN
     # creating snowflake session object
     return Session.builder.configs(connection_parameters).create()
 
